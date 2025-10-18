@@ -32,7 +32,9 @@ namespace MsalAppOnlyConsoleSdk
 
             var scopes = new string[] { "https://graph.microsoft.com/.default" };
             var authResult = await azureApp.AcquireTokenForClient(scopes).ExecuteAsync();
-            return authResult.AccessToken;
+
+            token = authResult.AccessToken;
+            return token;
         }
 
         public class TokenProvider : IAccessTokenProvider

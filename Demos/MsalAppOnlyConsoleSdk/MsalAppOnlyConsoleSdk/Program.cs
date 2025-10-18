@@ -6,8 +6,8 @@ namespace MsalAppOnlyConsoleSdk
 {
     internal class Program
     {
-        private static string tenantName = "robwindsortest980";
-        private static string userName = "meganb";
+        private static string tenantName = "";
+        private static string userName = "";
         private static string token = null;
 
         static void Main(string[] args)
@@ -22,8 +22,8 @@ namespace MsalAppOnlyConsoleSdk
                 return token;
             }
 
-            var clientId = "b0933a43-df5a-48aa-b438-8c8986544b2b";
-            var clientSecret = "QJZ8Q~tTpKdJyDChT6lP1iZ5uM6s.JvNNI~5gcAu";
+            var clientId = "";
+            var clientSecret = "";
             var authority = $"https://login.microsoftonline.com/{tenantName}.onmicrosoft.com/";
             var azureApp = ConfidentialClientApplicationBuilder.Create(clientId)
                 .WithAuthority(authority)

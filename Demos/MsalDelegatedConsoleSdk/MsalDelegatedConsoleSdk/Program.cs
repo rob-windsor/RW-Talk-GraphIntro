@@ -6,7 +6,7 @@ namespace MsalDelegatedConsoleSdk
 {
     internal class Program
     {
-        private static string tenantName = "robwindsortest980";
+        private static string tenantName = "";
         private static string token = null;
 
         static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace MsalDelegatedConsoleSdk
                 return token;
             }
 
-            var clientId = "43ec3caf-b22b-4fe3-84fd-340bd5b384cb";
+            var clientId = "";
             var authority = $"https://login.microsoftonline.com/{tenantName}.onmicrosoft.com/";
             var azureApp = PublicClientApplicationBuilder.Create(clientId)
                 .WithAuthority(authority)

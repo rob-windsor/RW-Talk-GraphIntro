@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-graph-pnp-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfxGraphPnp/SpfxGraphPnpWebPart.js",
+          "manifest": "./src/webparts/spfxGraphPnp/SpfxGraphPnpWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpfxGraphPnpWebPartStrings": "lib/webparts/spfxGraphPnp/loc/{locale}.js"
+  }
+}

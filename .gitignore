@@ -1,0 +1,27 @@
+# .NET and Visual Studio
+.vs/
+**/bin/
+**/obj/
+**/TestResults/
+**/artifacts/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node.js and SPFx
+node_modules/
+coverage/
+dist/
+lib/
+release/
+solution/
+temp/
+.heft/
+*.sppkg
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db

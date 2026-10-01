@@ -5,8 +5,8 @@ namespace MsalAppOnlyConsoleSdk
 {
     internal class Program
     {
-        private static string tenantName = "robwindsortest980";
-        private static string userName = "meganb";
+        private static string tenantName = "";
+        private static string userName = "";
 
 
         static void Main(string[] args)
@@ -18,8 +18,8 @@ namespace MsalAppOnlyConsoleSdk
         {
             var credential = new ClientSecretCredential(
                 tenantId: $"{tenantName}.onmicrosoft.com",
-                clientId: "a74dea2b-0ea9-42cc-8c54-e28b0b17a54b",
-                clientSecret: "fde8Q~L_c1pyXvPQWEUACCUXL.RCBGlcuHqy8c06"
+                clientId: "",
+                clientSecret: ""
             );
             var scopes = new string[] { "https://graph.microsoft.com/.default" };
             var client = new GraphServiceClient(credential, scopes);

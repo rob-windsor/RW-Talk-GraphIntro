@@ -6,7 +6,7 @@ namespace MsalDelegatedConsoleSdk
 {
     internal class Program
     {
-        private static string tenantName = "robwindsortest980";
+        private static string tenantName = "";
 
         static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace MsalDelegatedConsoleSdk
             var options = new InteractiveBrowserCredentialOptions
             {
                 TenantId = $"{tenantName}.onmicrosoft.com",
-                ClientId = "5ee80709-aba3-4ab9-9ccf-be69992f16ce",
+                ClientId = "",
                 RedirectUri = new Uri("http://localhost")
             };
 

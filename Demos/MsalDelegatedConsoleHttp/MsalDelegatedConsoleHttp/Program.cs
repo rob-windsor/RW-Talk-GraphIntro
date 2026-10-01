@@ -7,7 +7,7 @@ namespace MsalDelegatedConsoleHttp
 {
     internal class Program
     {
-        private static string tenantName = "robwindsortest980";
+        private static string tenantName = "";
 
         static void Main(string[] args)
         {
@@ -16,7 +16,7 @@ namespace MsalDelegatedConsoleHttp
 
         private static async Task<string> GetAccessToken()
         {
-            var clientId = "5ee80709-aba3-4ab9-9ccf-be69992f16ce";
+            var clientId = "";
             var authority = $"https://login.microsoftonline.com/{tenantName}.onmicrosoft.com/";
             var azureApp = PublicClientApplicationBuilder.Create(clientId)
                 .WithAuthority(authority)

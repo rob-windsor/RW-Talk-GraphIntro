@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-graph-pnp-client-side-solution",
+    "id": "2c62bfcb-7e86-4a37-9f4a-3a19336fa0e6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "SpfxGraphPnp description"
+      },
+      "longDescription": {
+        "default": "SpfxGraphPnp description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Group.Read.All"
+      }
+    ],     
+    "features": [
+      {
+        "title": "spfx-graph-pnp Feature",
+        "description": "The feature that activates elements of the spfx-graph-pnp solution.",
+        "id": "8c27780e-0565-4f8f-bcbf-d470e4b6f407",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-graph-pnp.sppkg"
+  }
+}

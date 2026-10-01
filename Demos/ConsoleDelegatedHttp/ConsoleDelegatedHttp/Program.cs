@@ -1,13 +1,14 @@
 ﻿using Microsoft.Identity.Client;
 using System.Net.Http.Headers;
-using System.Text.Json.Nodes;
 using System.Text;
+using System.Text.Json.Nodes;
 
-namespace MsalDelegatedConsoleHttp
+namespace ConsoleDelegatedHttp
 {
     internal class Program
     {
-        private static string tenantName = "";
+        private static string tenantName = "robwindsortest980";
+
 
         static void Main(string[] args)
         {
@@ -16,7 +17,7 @@ namespace MsalDelegatedConsoleHttp
 
         private static async Task<string> GetAccessToken()
         {
-            var clientId = "";
+            var clientId = "5ee80709-aba3-4ab9-9ccf-be69992f16ce";
             var authority = $"https://login.microsoftonline.com/{tenantName}.onmicrosoft.com/";
             var azureApp = PublicClientApplicationBuilder.Create(clientId)
                 .WithAuthority(authority)
@@ -36,7 +37,7 @@ namespace MsalDelegatedConsoleHttp
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var url = $"https://graph.microsoft.com/v1.0/me";
+            var url = "https://graph.microsoft.com/v1.0/me";
             using (var response = await client.GetAsync(url))
             {
                 response.EnsureSuccessStatusCode();
@@ -72,7 +73,7 @@ namespace MsalDelegatedConsoleHttp
             }
 
             url = "https://graph.microsoft.com/v1.0/me/drive/root:/GraphDemo.txt:/content";
-            var fileContent = "Updated from the MsalDelegatedConsoleHttp console application.";
+            var fileContent = "Updated from the ConsoleDelegatedHttp console application.";
             using (var uploadContent = new StringContent(fileContent, Encoding.UTF8, "text/plain"))
             {
                 using (var uploadResponse = await client.PutAsync(url, uploadContent))

@@ -2,11 +2,12 @@
 using Microsoft.Graph;
 using System.Text;
 
-namespace MsalDelegatedConsoleSdk
+namespace ConsoleDelegatedSdk
 {
     internal class Program
     {
-        private static string tenantName = "";
+        private static string tenantName = "robwindsortest980";
+
 
         static void Main(string[] args)
         {
@@ -18,7 +19,7 @@ namespace MsalDelegatedConsoleSdk
             var options = new InteractiveBrowserCredentialOptions
             {
                 TenantId = $"{tenantName}.onmicrosoft.com",
-                ClientId = "",
+                ClientId = "5ee80709-aba3-4ab9-9ccf-be69992f16ce",
                 RedirectUri = new Uri("http://localhost")
             };
 
@@ -48,7 +49,7 @@ namespace MsalDelegatedConsoleSdk
             var drive = await client.Me.Drive.GetAsync();
             if (drive?.Id != null)
             {
-                var fileContent = "Updated from the MsalDelegatedConsoleSdk console application.";
+                var fileContent = "Updated from the ConsoleDelegatedSdk console application.";
                 using var stream = new MemoryStream(Encoding.UTF8.GetBytes(fileContent));
 
                 var newFile = await client

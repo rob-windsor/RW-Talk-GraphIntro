@@ -5,7 +5,7 @@ Microsoft Graph is a unified endpoint that provides access to a set of RESTful w
 ## Resources
 
 Microsoft Graph Developer Center
-[https://graph.microsoft.com](https://graph.microsoft.com)
+[https://graph.microsoft.com](https://developer.microsoft.com/en-us/graph)
 
 Microsoft Graph Documentation
 [https://learn.microsoft.com/en-us/graph](https://learn.microsoft.com/en-us/graph)
